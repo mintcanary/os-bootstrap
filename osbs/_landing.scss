@@ -1,0 +1,237 @@
+.landing {
+  .banner {
+    .container {
+      display: flex;
+    }
+
+    &.one-image,
+    &.two-images {
+      padding: 0;
+
+      @media (min-width: $screen-sm-min) {
+        padding-top: $base-spacing/2;
+      }
+
+      @media (min-width: $screen-md-min) {
+        padding-top: $base-spacing;
+      }
+
+      .container {
+        width: auto;
+        padding: 0;
+      }
+
+      .text {
+        flex-grow: 1;
+        font-size: 20px;
+        padding: 0 $base-spacing $base-spacing $base-spacing;
+
+        @media (min-width: $screen-sm-min) {
+          padding: $base-spacing*2;
+        }
+
+        h1 {
+          font-size: 32px;
+        }
+
+        .cta {
+          margin-right: $base-spacing/3;
+          
+          @media (min-width: $screen-sm-min) {
+            margin-left: $base-spacing/3;
+          }
+        }
+      }
+
+      .image {
+        background-size: auto 347px;
+        background-repeat: no-repeat;
+        background-position: bottom left;
+
+        @media (min-width: $screen-sm-min) {
+          min-height: 347px;
+        }
+
+        &.one {
+          background-position: bottom right;
+        }
+      }
+    }
+
+    &.one-image {
+      .image {
+        @media (min-width: $screen-sm-min) {
+          width: 50%;
+        }
+      }
+    }
+
+    &.two-images {
+      .image {
+        @media (min-width: $screen-sm-min) {
+          width: 33%;
+        }
+      }
+
+      .text {
+        @media (min-width: $screen-sm-min) {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  section {
+    border-bottom: solid 1px $light-grey;
+    padding: $base-spacing;
+    overflow: hidden;
+
+    @media (min-width: $screen-md-min) {
+      padding-top: $base-spacing*2;
+      padding-bottom: $base-spacing*2;
+    }
+
+    &:nth-child(odd) {
+      background-color: $lighter-grey;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 36px;
+    }
+
+    h3 {
+      display: inline-flex;
+      align-items: baseline;
+      line-height: 1;
+      font-size: 22px;
+      margin-bottom: $base-spacing*0.75;
+
+      .number {
+        border: solid 3px $text-color;
+        font-size: 0.8em;
+        width: 1.8em;
+        height: 1.8em;
+        line-height: 1.8em;
+        border-radius: 50%;
+        font-weight: 600;
+        margin-right: 0.5em;
+        text-align: center;
+      }
+    }
+
+    &.image-bottom {
+      @media (min-width: $screen-sm-min) {
+        padding-bottom: 0;
+        text-align: center;
+      }
+
+      .image {
+        display: none;
+
+        @media (min-width: $screen-sm-min) {
+          display: block;
+          text-align: center;
+          height: 140px;
+          overflow: hidden;
+          margin-top: $base-spacing;
+
+          img {
+            width: 726px;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+
+    &.image-left,
+    &.image-right {
+      .container {
+        display: flex;
+        align-items: center;
+
+        .image {
+          display: none;
+
+          @media (min-width: $screen-sm-min) {
+            display: block;
+            max-width: 50%;
+          }
+
+          img {
+            max-height: 324px;
+          }
+        }
+      }
+    }
+
+    &.image-left {
+      .text {
+        order: 2;
+        @media (min-width: $screen-sm-min) {
+          padding-left: $base-spacing;
+        }
+      }
+    }
+
+    &.image-right {
+      .text {
+        @media (min-width: $screen-sm-min) {
+          padding-right: $base-spacing;
+        }
+      }
+    }
+
+    &.icons {
+      @media (min-width: $screen-sm-min) {
+        text-align: center;
+      }
+
+      .items {
+        @media (min-width: $screen-sm-min) {
+          display: flex;
+
+          & > div {
+            padding: $base-spacing;
+            flex-basis: 0;
+            flex-grow: 1;
+          }
+        }
+      }
+
+      svg {
+        width: 100%;
+        max-height: 90px;
+        display: none;
+
+        @media (min-width: $screen-sm-min) {
+          width: auto;
+          max-width: 100%;
+          display: inline-block;
+        }
+      }
+
+      .item-1 {
+        svg {
+          fill: $green;
+        }
+      }
+      .item-2 {
+        svg {
+          fill: $blue;
+        }
+      }
+      .item-3 {
+        svg {
+          fill: $purple;
+        }
+      }
+    }
+
+    &.action {
+      @media (min-width: $screen-sm-min) {
+        text-align: center;
+      }
+    }
+  }
+}
