@@ -222,7 +222,6 @@
           &:before {
             width: 26px;
             height: 26px;
-            background-color: $grey;
             position: absolute;
             left: auto;
             right: 13px;
@@ -230,71 +229,68 @@
             margin-top: -13px;
             border-radius: 50%;
           }
-          &:after {
-            border-color: #fff;
-          }
         }
 
         &.type-1 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 30);
+            &:after {
+              border-color: adjust_hue($primary-colour, 30);
             }
           }
         }
         &.type-2 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 60);
+            &:after {
+              border-color: adjust_hue($primary-colour, 60);
             }
           }
         }
         &.type-3 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 90);
+            &:after {
+              border-color: adjust_hue($primary-colour, 90);
             }
           }
         }
         &.type-4 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 120);
+            &:after {
+              border-color: adjust_hue($primary-colour, 120);
             }
           }
         }
         &.type-5 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 140);
+            &:after {
+              border-color: adjust_hue($primary-colour, 140);
             }
           }
         }
         &.type-6 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 170);
+            &:after {
+              border-color: adjust_hue($primary-colour, 170);
             }
           }
         }
         &.type-7 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 200);
+            &:after {
+              border-color: adjust_hue($primary-colour, 200);
             }
           }
         }
         &.type-8 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 230);
+            &:after {
+              border-color: adjust_hue($primary-colour, 230);
             }
           }
         }
         &.type-9 {
           .mm-next {
-            &:before {
-              background-color: adjust_hue($primary-colour, 260);
+            &:after {
+              border-color: adjust_hue($primary-colour, 260);
             }
           }
         }
@@ -368,7 +364,103 @@
   }
 
   &.data-type-1 {
-    background-color: adjust_hue($primary-colour, 30);
+    background-color: rgba(adjust_hue($primary-colour, 30),0.5);
+    .data-type-select .mm-listview  > li.type-1 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 30);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+  &.data-type-2 {
+    background-color: rgba(adjust_hue($primary-colour, 60),0.5);
+    .data-type-select .mm-listview  > li.type-2 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 60);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+  &.data-type-3 {
+    background-color: rgba(adjust_hue($primary-colour, 90),0.5);
+    .data-type-select .mm-listview  > li.type-3 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 90);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+  &.data-type-4 {
+    background-color: rgba(adjust_hue($primary-colour, 120),0.5);
+    .data-type-select .mm-listview  > li.type-4 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 120);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+  &.data-type-5 {
+    background-color: rgba(adjust_hue($primary-colour, 140),0.5);
+    .data-type-select .mm-listview  > li.type-5 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 140);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+  &.data-type-6 {
+    background-color: rgba(adjust_hue($primary-colour, 170),0.5);
+    .data-type-select .mm-listview  > li.type-6 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 170);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+  &.data-type-7 {
+    background-color: rgba(adjust_hue($primary-colour, 200),0.5);
+    .data-type-select .mm-listview  > li.type-7 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 200);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+  &.data-type-8 {
+    background-color: rgba(adjust_hue($primary-colour, 230),0.5);
+    .data-type-select .mm-listview  > li.type-8 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 230);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
+  }
+  &.data-type-9 {
+    background-color: rgba(adjust_hue($primary-colour, 260),0.5);
+    .data-type-select .mm-listview  > li.type-9 .mm-next {
+      &:before {
+        background-color: adjust_hue($primary-colour, 260);
+      }
+      &:after {
+        border-color: #fff;
+      }
+    }
   }
 }
 
