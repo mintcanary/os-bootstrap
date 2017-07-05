@@ -520,6 +520,14 @@
         background-color: rgba(adjust_hue($primary-colour, 260),0.9);
       }
 
+      header {
+        .icon {
+          .tick {
+            display: none;
+          }
+        }
+      }
+
     }
 
     .navigation {
@@ -559,6 +567,18 @@
     }
 
     &.ready {
+
+      header {
+        .icon {
+          .tick {
+            display: block;
+          }
+          .cross {
+            display: none;
+          }
+        }
+      }
+
       .navigation {
         li {
           &.next {
