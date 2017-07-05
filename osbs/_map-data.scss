@@ -80,7 +80,7 @@
       font-size: 14px;
       padding: 10px 10px 0 10px;
       opacity: 0.75;
-      @include transition(opacity, 0.5s, ease-out);
+      @include transition(opacity, 0.5s);
 
       ol {
         display: table;
@@ -143,7 +143,7 @@
         resize: none;
         color: #fff;
         height: 100px;
-        @include transition(background-color, 0.5s, ease-out);
+        @include transition(background-color, 0.5s);
 
         &:hover {
           background-color: desaturate(lighten($dark-grey, 20%), 7%);
@@ -156,7 +156,7 @@
     }
 
     .field-info {
-      @include transition(bottom, 0.5s, ease-out);
+      @include transition(bottom, 0.5s);
       position: absolute;
       bottom: 0;
       left: 0;
