@@ -185,6 +185,10 @@
         @include minimal-textarea;
       }
 
+      .select {
+        @include minimal-select;
+      }
+
       &:before {
         content: '';
         display: block;
@@ -216,6 +220,25 @@
 
     .mm-listview {
       margin-bottom: 0;
+
+      .field {
+        margin-top: 10px;
+        width: 100%;
+
+        & > * {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+
+        &.short {
+          width: 50%;
+          float: left;
+        }
+
+        .select {
+          padding: 0 10px;
+        }
+      }
 
       & > li {
         .mm-next {
@@ -492,32 +515,40 @@
       background-color: rgba(#fff,0.7);
       border-radius: $border-radius-base;
 
+      @mixin active-data-type-colour($adjust) {
+        background-color: rgba(adjust_hue($primary-colour, $adjust),0.9);
+
+        & > .inner .field-info input:focus {
+          border-color: adjust_hue($primary-colour, $adjust);
+        }
+      }
+
       &.data-type-1 {
-        background-color: rgba(adjust_hue($primary-colour, 30),0.9);
+        @include active-data-type-colour(30);
       }
       &.data-type-2 {
-        background-color: rgba(adjust_hue($primary-colour, 60),0.9);
+        @include active-data-type-colour(60);
       }
       &.data-type-3 {
-        background-color: rgba(adjust_hue($primary-colour, 90),0.9);
+        @include active-data-type-colour(90);
       }
       &.data-type-4 {
-        background-color: rgba(adjust_hue($primary-colour, 120),0.9);
+        @include active-data-type-colour(120);
       }
       &.data-type-5 {
-        background-color: rgba(adjust_hue($primary-colour, 140),0.9);
+        @include active-data-type-colour(140);
       }
       &.data-type-6 {
-        background-color: rgba(adjust_hue($primary-colour, 170),0.9);
+        @include active-data-type-colour(170);
       }
       &.data-type-7 {
-        background-color: rgba(adjust_hue($primary-colour, 200),0.9);
+        @include active-data-type-colour(200);
       }
       &.data-type-8 {
-        background-color: rgba(adjust_hue($primary-colour, 230),0.9);
+        @include active-data-type-colour(230);
       }
       &.data-type-9 {
-        background-color: rgba(adjust_hue($primary-colour, 260),0.9);
+        @include active-data-type-colour(260);
       }
 
       header {
